@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C535AD282B11F4F6005A54CA /* Ticket.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C535AD272B11F4F6005A54CA /* Ticket.storyboard */; };
+		C535AD2B2B11F5E3005A54CA /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C535AD2A2B11F5E2005A54CA /* SignUpViewController.swift */; };
+		C535AD2D2B11F6B5005A54CA /* TicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C535AD2C2B11F6B5005A54CA /* TicketViewController.swift */; };
+		C535AD2F2B11F6E0005A54CA /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C535AD2E2B11F6E0005A54CA /* LogInViewController.swift */; };
+		C535AD322B11F732005A54CA /* MakeGradientToButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C535AD312B11F732005A54CA /* MakeGradientToButton.swift */; };
+		C535AD362B182238005A54CA /* Calculator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C535AD352B182238005A54CA /* Calculator.storyboard */; };
+		C535AD382B182249005A54CA /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C535AD372B182249005A54CA /* CalculatorViewController.swift */; };
+		C535AD8C2B1EC248005A54CA /* extensionUIVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C535AD8B2B1EC248005A54CA /* extensionUIVc.swift */; };
+		C535AD8E2B1EC284005A54CA /* appStoryBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C535AD8D2B1EC284005A54CA /* appStoryBoard.swift */; };
+		C535AD902B1F0C35005A54CA /* ProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C535AD8F2B1F0C35005A54CA /* ProjectTableViewCell.swift */; };
+		C535AD932B1F11A0005A54CA /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = C535AD922B1F11A0005A54CA /* Project.swift */; };
+		C535AD952B1F11D4005A54CA /* projectData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C535AD942B1F11D4005A54CA /* projectData.swift */; };
+		C535ADA02B201ECA005A54CA /* codableExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C535AD9F2B201ECA005A54CA /* codableExt.swift */; };
 		C59B54042B11E62A00313C93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B54032B11E62A00313C93 /* AppDelegate.swift */; };
 		C59B54062B11E62A00313C93 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B54052B11E62A00313C93 /* SceneDelegate.swift */; };
 		C59B54082B11E62A00313C93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B54072B11E62A00313C93 /* ViewController.swift */; };
@@ -36,6 +49,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C535AD272B11F4F6005A54CA /* Ticket.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Ticket.storyboard; sourceTree = "<group>"; };
+		C535AD2A2B11F5E2005A54CA /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		C535AD2C2B11F6B5005A54CA /* TicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketViewController.swift; sourceTree = "<group>"; };
+		C535AD2E2B11F6E0005A54CA /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		C535AD312B11F732005A54CA /* MakeGradientToButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeGradientToButton.swift; sourceTree = "<group>"; };
+		C535AD352B182238005A54CA /* Calculator.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calculator.storyboard; sourceTree = "<group>"; };
+		C535AD372B182249005A54CA /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		C535AD8B2B1EC248005A54CA /* extensionUIVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionUIVc.swift; sourceTree = "<group>"; };
+		C535AD8D2B1EC284005A54CA /* appStoryBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appStoryBoard.swift; sourceTree = "<group>"; };
+		C535AD8F2B1F0C35005A54CA /* ProjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTableViewCell.swift; sourceTree = "<group>"; };
+		C535AD922B1F11A0005A54CA /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		C535AD942B1F11D4005A54CA /* projectData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = projectData.swift; sourceTree = "<group>"; };
+		C535AD9F2B201ECA005A54CA /* codableExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = codableExt.swift; sourceTree = "<group>"; };
 		C59B54002B11E62A00313C93 /* ui_kit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ui_kit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C59B54032B11E62A00313C93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C59B54052B11E62A00313C93 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +102,95 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C535AD242B11F480005A54CA /* main */ = {
+			isa = PBXGroup;
+			children = (
+				C535AD912B1F0D62005A54CA /* model */,
+				C535AD252B11F48D005A54CA /* viewController */,
+				C59B54092B11E62A00313C93 /* Main.storyboard */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		C535AD252B11F48D005A54CA /* viewController */ = {
+			isa = PBXGroup;
+			children = (
+				C59B54072B11E62A00313C93 /* ViewController.swift */,
+				C535AD8F2B1F0C35005A54CA /* ProjectTableViewCell.swift */,
+			);
+			path = viewController;
+			sourceTree = "<group>";
+		};
+		C535AD262B11F4C9005A54CA /* ticket */ = {
+			isa = PBXGroup;
+			children = (
+				C535AD292B11F52C005A54CA /* viewController */,
+				C535AD272B11F4F6005A54CA /* Ticket.storyboard */,
+			);
+			path = ticket;
+			sourceTree = "<group>";
+		};
+		C535AD292B11F52C005A54CA /* viewController */ = {
+			isa = PBXGroup;
+			children = (
+				C535AD2A2B11F5E2005A54CA /* SignUpViewController.swift */,
+				C535AD2C2B11F6B5005A54CA /* TicketViewController.swift */,
+				C535AD2E2B11F6E0005A54CA /* LogInViewController.swift */,
+			);
+			path = viewController;
+			sourceTree = "<group>";
+		};
+		C535AD302B11F70D005A54CA /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				C535AD312B11F732005A54CA /* MakeGradientToButton.swift */,
+				C535AD8D2B1EC284005A54CA /* appStoryBoard.swift */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		C535AD332B182216005A54CA /* calculator */ = {
+			isa = PBXGroup;
+			children = (
+				C535AD342B182224005A54CA /* viewController */,
+				C535AD352B182238005A54CA /* Calculator.storyboard */,
+			);
+			path = calculator;
+			sourceTree = "<group>";
+		};
+		C535AD342B182224005A54CA /* viewController */ = {
+			isa = PBXGroup;
+			children = (
+				C535AD372B182249005A54CA /* CalculatorViewController.swift */,
+			);
+			path = viewController;
+			sourceTree = "<group>";
+		};
+		C535AD912B1F0D62005A54CA /* model */ = {
+			isa = PBXGroup;
+			children = (
+				C535AD922B1F11A0005A54CA /* Project.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		C535AD9E2B201E58005A54CA /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				C535AD8B2B1EC248005A54CA /* extensionUIVc.swift */,
+				C535AD9F2B201ECA005A54CA /* codableExt.swift */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
+		C535ADA12B201F2B005A54CA /* data */ = {
+			isa = PBXGroup;
+			children = (
+				C535AD942B1F11D4005A54CA /* projectData.swift */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
 		C59B53F72B11E62A00313C93 = {
 			isa = PBXGroup;
 			children = (
@@ -99,10 +214,14 @@
 		C59B54022B11E62A00313C93 /* ui_kit */ = {
 			isa = PBXGroup;
 			children = (
+				C535ADA12B201F2B005A54CA /* data */,
+				C535AD9E2B201E58005A54CA /* extension */,
+				C535AD332B182216005A54CA /* calculator */,
+				C535AD302B11F70D005A54CA /* ui */,
+				C535AD262B11F4C9005A54CA /* ticket */,
+				C535AD242B11F480005A54CA /* main */,
 				C59B54032B11E62A00313C93 /* AppDelegate.swift */,
 				C59B54052B11E62A00313C93 /* SceneDelegate.swift */,
-				C59B54072B11E62A00313C93 /* ViewController.swift */,
-				C59B54092B11E62A00313C93 /* Main.storyboard */,
 				C59B540C2B11E62C00313C93 /* Assets.xcassets */,
 				C59B540E2B11E62C00313C93 /* LaunchScreen.storyboard */,
 				C59B54112B11E62C00313C93 /* Info.plist */,
@@ -143,6 +262,8 @@
 			dependencies = (
 			);
 			name = ui_kit;
+			packageProductDependencies = (
+			);
 			productName = ui_kit;
 			productReference = C59B54002B11E62A00313C93 /* ui_kit.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +336,8 @@
 				Base,
 			);
 			mainGroup = C59B53F72B11E62A00313C93;
+			packageReferences = (
+			);
 			productRefGroup = C59B54012B11E62A00313C93 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -231,6 +354,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C535AD282B11F4F6005A54CA /* Ticket.storyboard in Resources */,
+				C535AD362B182238005A54CA /* Calculator.storyboard in Resources */,
 				C59B54102B11E62C00313C93 /* LaunchScreen.storyboard in Resources */,
 				C59B540D2B11E62C00313C93 /* Assets.xcassets in Resources */,
 				C59B540B2B11E62A00313C93 /* Main.storyboard in Resources */,
@@ -259,8 +384,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				C59B54082B11E62A00313C93 /* ViewController.swift in Sources */,
+				C535AD2D2B11F6B5005A54CA /* TicketViewController.swift in Sources */,
+				C535AD8E2B1EC284005A54CA /* appStoryBoard.swift in Sources */,
+				C535AD382B182249005A54CA /* CalculatorViewController.swift in Sources */,
+				C535AD2F2B11F6E0005A54CA /* LogInViewController.swift in Sources */,
 				C59B54042B11E62A00313C93 /* AppDelegate.swift in Sources */,
+				C535AD8C2B1EC248005A54CA /* extensionUIVc.swift in Sources */,
+				C535AD2B2B11F5E3005A54CA /* SignUpViewController.swift in Sources */,
+				C535AD952B1F11D4005A54CA /* projectData.swift in Sources */,
+				C535AD902B1F0C35005A54CA /* ProjectTableViewCell.swift in Sources */,
 				C59B54062B11E62A00313C93 /* SceneDelegate.swift in Sources */,
+				C535AD322B11F732005A54CA /* MakeGradientToButton.swift in Sources */,
+				C535AD932B1F11A0005A54CA /* Project.swift in Sources */,
+				C535ADA02B201ECA005A54CA /* codableExt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,4 +7,20 @@
 
 import Foundation
 
-let projectList = [Project(title: "Calculator", description: "iOS Calculator UI", img: "pj_calculator"), Project(title: "Ticket", description: "Buy Ticket and Enjoy Your Life", img: "pj_ticket"), Project(title: "Movie", description: "Take Entertainment and Relax", img: "pj_movie")]
+let projectData = [
+    [
+        "title": "Calculator",
+        "desc": "iOS Calculator UI",
+        "img": "pj_calculator"
+    ],
+    [
+        "title": "Ticket",
+        "desc": "Buy Ticket and Enjoy Your Life",
+        "img": "pj_ticket"
+    ],
+    [
+        "title": "Movie",
+        "desc": "Take Entertainment and Relax",
+        "img": "pj_movie"
+    ]
+]

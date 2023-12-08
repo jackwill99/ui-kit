@@ -2,28 +2,29 @@
 //  LogInViewController.swift
 //  ui_kit
 //
-//  Created by Tensor Lab on 11/25/23.
+//  Created by Tensor Lab on 11/19/23.
 //
 
 import UIKit
 
 class LogInViewController: UIViewController {
+    @IBOutlet var btnLogin: UIButton!
+
+    var makeGradientButton: MakeGradientToButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        makeGradientButton = MakeGradientToButton(uiButton: btnLogin)
+
+        btnLogin.layer.cornerRadius = 23
+
+        makeGradientButton.makeGradient(with: [UIColor.white.cgColor, UIColor.systemGray2.withAlphaComponent(0.2).cgColor], radius: 23)
     }
-    
 
-    /*
-    // MARK: - Navigation
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        makeGradientButton.updateLayoutSubview()
     }
-    */
-
 }

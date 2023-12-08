@@ -8,12 +8,64 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet var tblProject: UITableView!
+
+    var projectList: [Project]?
+
+    var navigationBarStatus = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        navigationItem.title = "UIKit Example Projects"
+
+        // change title color
+        let textChangeColor = [NSAttributedString.Key.foregroundColor: UIColor.purple]
+        navigationController?.navigationBar.titleTextAttributes = textChangeColor
+        navigationController?.navigationBar.largeTitleTextAttributes = textChangeColor
+
+        projectList = projectList.decodeString(from: projectData.toJSONString)
+
+        tblProject.delegate = self
+        tblProject.dataSource = self
     }
-
-
 }
 
+// MARK: - Table Data Source and Delegate
+
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return projectList?.count ?? 0
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let tbl = tableView.dequeueReusableCell(withIdentifier: "ProjectTableViewCell", for: indexPath) as! ProjectTableViewCell
+
+        if let project = projectList?[indexPath.row] {
+            tbl.config(img: project.img, title: project.title, desc: project.description)
+        }
+
+        return tbl
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0:
+            let calculatorVC = CalculatorViewController.viewStoryboard(to: .Calculator)
+            // Present the view controller
+//            calculatorVC.modalTransitionStyle = .crossDissolve
+//            calculatorVC.modalPresentationStyle = .fullScreen
+//            present(calculatorVC, animated: true)
+
+            // Navigate the view controller
+            navigationController?.pushViewController(calculatorVC, animated: true)
+
+        default:
+            print("Can't go")
+        }
+    }
+}
