@@ -31,7 +31,7 @@
         <scene sceneID="r32-3e-RXs">
             <objects>
                 <navigationController title="HomeNavigationController" id="GQI-mb-8hE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" selectedImage="house" catalog="system" id="ghT-RA-Exb">
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="ghT-RA-Exb">
                         <color key="badgeColor" name="AccentColor"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lqg-Nv-Sy3">
@@ -136,7 +136,7 @@
                         <viewLayoutGuide key="safeArea" id="Own-wV-fgz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Training" selectedImage="doc.text.below.ecg.fill.rtl" catalog="system" id="McQ-1n-rL5"/>
+                    <tabBarItem key="tabBarItem" title="Training" image="doc.richtext.ja" catalog="system" id="McQ-1n-rL5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AzO-p0-qxb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -144,7 +144,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="doc.text.below.ecg.fill.rtl" catalog="system" width="115" height="128"/>
+        <image name="doc.richtext.ja" catalog="system" width="115" height="128"/>
         <image name="house" catalog="system" width="128" height="104"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

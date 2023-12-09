@@ -16,14 +16,11 @@ enum AppStoryboard: String {
     }
 
     func viewController<T: UIViewController>(to viewControllerClass: T.Type) -> T {
-//        let storyboardID = (viewControllerClass as UIViewController.Type).storyboardID
+        /// NOTE: Please be careful that you must declare storyboardID of your view controller as the same name of view controller class
+        /// Otherwise: It will cause error
+        let instanceName = String(describing: viewControllerClass as UIViewController.Type)
 
-        /// Note: You must same the storyboardId and storyboard name
-        let storyboardID = rawValue
+        let storyboardID = instanceName
         return instance.instantiateViewController(withIdentifier: storyboardID) as! T
-    }
-
-    func initialViewController() -> UIViewController? {
-        return instance.instantiateInitialViewController()
     }
 }

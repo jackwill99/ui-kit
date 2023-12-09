@@ -55,7 +55,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
         case 0:
-            let calculatorVC = CalculatorViewController.viewStoryboard(to: .Calculator)
+            let calculatorVC = CalculatorViewController.getController(to: .Calculator)
+
             // Present the view controller
 //            calculatorVC.modalTransitionStyle = .crossDissolve
 //            calculatorVC.modalPresentationStyle = .fullScreen
@@ -63,7 +64,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 
             // Navigate the view controller
             navigationController?.pushViewController(calculatorVC, animated: true)
-
+        case 1:
+            let ticketVC = TicketViewController.getController(to: .Ticket)
+            navigationController?.pushViewController(ticketVC, animated: true)
         default:
             print("Can't go")
         }

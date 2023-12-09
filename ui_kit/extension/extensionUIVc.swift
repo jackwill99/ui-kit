@@ -9,11 +9,7 @@ import Foundation
 import UIKit
 
 extension UIViewController {
-//    class var storyboardID: String {
-//        return "\(self)"
-//    }
-
-    static func viewStoryboard(to appStoryboard: AppStoryboard) -> Self {
+    static func getController(to appStoryboard: AppStoryboard) -> Self {
         return appStoryboard.viewController(to: self)
     }
 }

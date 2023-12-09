@@ -11,7 +11,7 @@
         <!--Calculator-->
         <scene sceneID="uQa-Va-fTU">
             <objects>
-                <viewController storyboardIdentifier="Calculator" id="Zbt-nb-i6b" customClass="CalculatorViewController" customModule="ui_kit_autolayout" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CalculatorViewController" id="Zbt-nb-i6b" customClass="CalculatorViewController" customModule="ui_kit_autolayout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uDe-nt-mhA">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -58,4 +58,8 @@ class SignUpViewController: UIViewController {
             txtPassword.isSecureTextEntry = false
         }
     }
+
+    @IBAction func login() {
+        dismiss(animated: true)
+    }
 }

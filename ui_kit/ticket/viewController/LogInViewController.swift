@@ -8,23 +8,35 @@
 import UIKit
 
 class LogInViewController: UIViewController {
-    @IBOutlet var btnLogin: UIButton!
+    @IBOutlet var btnSignUp: UIButton!
 
     var makeGradientButton: MakeGradientToButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        makeGradientButton = MakeGradientToButton(uiButton: btnLogin)
+        makeGradientButton = MakeGradientToButton(uiButton: btnSignUp)
 
-        btnLogin.layer.cornerRadius = 23
+        btnSignUp.layer.cornerRadius = 23
 
-        makeGradientButton.makeGradient(with: [UIColor.white.cgColor, UIColor.systemGray2.withAlphaComponent(0.2).cgColor], radius: 23)
+        makeGradientButton.makeGradient(with: [UIColor.systemBlue.cgColor, UIColor.purple.cgColor], radius: 23)
     }
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
 
         makeGradientButton.updateLayoutSubview()
+    }
+
+    @IBAction func skip() {
+        dismiss(animated: true)
+    }
+
+    @IBAction func signUP() {
+        let signupVC = SignUpViewController.getController(to: .Ticket)
+
+        signupVC.modalTransitionStyle = .coverVertical
+
+        present(signupVC, animated: true)
     }
 }

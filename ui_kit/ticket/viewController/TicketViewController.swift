@@ -22,4 +22,11 @@ class TicketViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         makeGradientButton.updateLayoutSubview()
     }
+
+    @IBAction func login() {
+        let loginVC = LogInViewController.getController(to: .Ticket)
+        loginVC.modalTransitionStyle = .coverVertical
+
+        present(loginVC, animated: true)
+    }
 }
