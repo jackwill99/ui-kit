@@ -1,13 +1,13 @@
 //
-//  ViewController.swift
+//  GeneralViewController.swift
 //  ui_kit
 //
-//  Created by Tensor Lab on 11/25/23.
+//  Created by Tensor Lab on 12/10/23.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class GeneralViewController: UIViewController {
     @IBOutlet var tblProject: UITableView!
 
     var projectList: [Project]?
@@ -15,14 +15,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationItem.title = "UIKit Example Projects"
+        navigationItem.title = "General Testing Projects"
 
         // change title color
         let textChangeColor = [NSAttributedString.Key.foregroundColor: UIColor.purple]
         navigationController?.navigationBar.titleTextAttributes = textChangeColor
         navigationController?.navigationBar.largeTitleTextAttributes = textChangeColor
 
-        projectList = projectList.decode(from: projectData.toJSONString)
+        projectList = projectList.decode(from: generalProjectData.toJSONString)
 
         tblProject.delegate = self
         tblProject.dataSource = self
@@ -31,7 +31,7 @@ class ViewController: UIViewController {
 
 // MARK: - Table Data Source and Delegate
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension GeneralViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return projectList?.count ?? 0
     }
@@ -53,24 +53,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
         case 0:
-            let calculatorVC = CalculatorViewController.getController(to: .Calculator)
+            let calculatorVC = TextFieldDelegateViewController.getController(to: .TextField)
 
-            // Present the view controller
-//            calculatorVC.modalTransitionStyle = .crossDissolve
-//            calculatorVC.modalPresentationStyle = .fullScreen
-//            present(calculatorVC, animated: true)
-
-            // Navigate the view controller
             navigationController?.pushViewController(calculatorVC, animated: true)
-        case 1:
-            let ticketVC = TicketViewController.getController(to: .Ticket)
-            navigationController?.pushViewController(ticketVC, animated: true)
-        case 2:
-            let movieVC = MovieViewController.getController(to: .Movie)
-            navigationController?.pushViewController(movieVC, animated: true)
-        case 3:
-            let movieCltVC = MovieCollectionViewController.getController(to: .Movie)
-            navigationController?.pushViewController(movieCltVC, animated: true)
+
         default:
             print("Can't go")
         }

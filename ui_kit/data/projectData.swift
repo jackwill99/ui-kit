@@ -29,3 +29,11 @@ let projectData = [
         "img": "pj_movie"
     ]
 ]
+
+let generalProjectData = [
+    [
+        "title": "Text Field Delegate",
+        "desc": "Learn Observing the NotificationCenter",
+        "img": "pj_text_field"
+    ]
+]

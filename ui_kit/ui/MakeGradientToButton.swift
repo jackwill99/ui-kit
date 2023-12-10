@@ -18,10 +18,10 @@ class MakeGradientToButton {
     /// After adding new gradient layer to your button, update added layer frame
     func updateLayoutSubview() {
         // Update gradient layer frame based on the button's width
-        guard let btnContinueGradientLayer = uiButton.layer.sublayers?.first else {
+        guard let btnGradientLayer = uiButton.layer.sublayers?.first else {
             return
         }
-        btnContinueGradientLayer.frame = uiButton.bounds
+        btnGradientLayer.frame = uiButton.bounds
     }
 
     /// Change your button to gradient by adding new gradient sub layers to this
