@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         navigationController?.navigationBar.titleTextAttributes = textChangeColor
         navigationController?.navigationBar.largeTitleTextAttributes = textChangeColor
 
-        projectList = projectList.decodeString(from: projectData.toJSONString)
+        projectList = projectList.decode(from: projectData.toJSONString)
 
         tblProject.delegate = self
         tblProject.dataSource = self
@@ -67,6 +67,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         case 1:
             let ticketVC = TicketViewController.getController(to: .Ticket)
             navigationController?.pushViewController(ticketVC, animated: true)
+        case 2:
+            let movieVC = MovieViewController.getController(to: .Movie)
+            navigationController?.pushViewController(movieVC, animated: true)
         default:
             print("Can't go")
         }

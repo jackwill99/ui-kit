@@ -7,14 +7,18 @@
 
 import Foundation
 
-extension Encodable {
+extension Collection where Iterator.Element == [String: Any] {
     var toJSONString: String {
-        let jsonData = try! JSONEncoder().encode(self)
-        return String(data: jsonData, encoding: .utf8)!
+        if self is [[String: Any]] {
+            let theJSONData = try! JSONSerialization.data(withJSONObject: self, options: .prettyPrinted)
+
+            return String(data: theJSONData, encoding: .utf8)!
+        }
+        return "[]"
     }
 }
 
-extension Dictionary {
+extension Encodable {
     var toJSONString: String {
         let theJSONData = try! JSONSerialization.data(withJSONObject: self, options: .prettyPrinted)
 
@@ -23,7 +27,7 @@ extension Dictionary {
 }
 
 extension Decodable {
-    func decodeString<T: Decodable>(from jsonString: String) -> T? {
+    func decode<T: Decodable>(from jsonString: String) -> T? {
         // Convert the string to data
         let data = Data(jsonString.utf8)
 
