@@ -5,6 +5,7 @@
 //  Created by Tensor Lab on 11/30/23.
 //
 
+import Kingfisher
 import UIKit
 
 class MovieCustomCell: UITableViewCell {
@@ -35,6 +36,11 @@ class MovieCustomCell: UITableViewCell {
 
         let url = URL(string: movieImage)
 
+        // MARK: - Using Third-Party Library of Kingfisher
+
+        img.contentMode = .scaleAspectFill
+        img.kf.setImage(with: url)
+
         // MARK: - Download the content of the data
 
 //        if let imgUrl = url {
@@ -63,27 +69,27 @@ class MovieCustomCell: UITableViewCell {
 
         // MARK: - Background thread
 
-        DispatchQueue.global().async {
-            if let imgUrl = url {
-                do {
-                    let data = try Data(contentsOf: imgUrl)
-
-                    // Put it on main thread
-                    DispatchQueue.main.async {
-                        self.img.image = UIImage(data: data)
-                    }
-                } catch {
-                    DispatchQueue.main.async {
-                        self.img.image = UIImage(named: "008")
-                    }
-                }
-
-                DispatchQueue.main.async {
-                    self.img.contentMode = .scaleAspectFill
-                    self.img.layer.cornerRadius = 10
-                }
-            }
-        }
+//        DispatchQueue.global().async {
+//            if let imgUrl = url {
+//                do {
+//                    let data = try Data(contentsOf: imgUrl)
+//
+//                    // Put it on main thread
+//                    DispatchQueue.main.async {
+//                        self.img.image = UIImage(data: data)
+//                    }
+//                } catch {
+//                    DispatchQueue.main.async {
+//                        self.img.image = UIImage(named: "008")
+//                    }
+//                }
+//
+//                DispatchQueue.main.async {
+//                    self.img.contentMode = .scaleAspectFill
+//                    self.img.layer.cornerRadius = 10
+//                }
+//            }
+//        }
     }
 
     private func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
