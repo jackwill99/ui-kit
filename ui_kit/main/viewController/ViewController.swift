@@ -70,6 +70,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         case 2:
             let movieVC = MovieViewController.getController(to: .Movie)
             navigationController?.pushViewController(movieVC, animated: true)
+        case 3:
+            let movieCltVC = MovieCollectionViewController.getController(to: .Movie)
+            navigationController?.pushViewController(movieCltVC, animated: true)
         default:
             print("Can't go")
         }

@@ -22,5 +22,10 @@ let projectData = [
         "title": "Movie",
         "desc": "Take Entertainment and Relax",
         "img": "pj_movie"
+    ],
+    [
+        "title": "Movie Collection",
+        "desc": "Take Entertainment and Relax",
+        "img": "pj_movie"
     ]
 ]
