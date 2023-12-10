@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 enum AppStoryboard: String {
+    /// NOTE: These must be the same  of your storyboard name
     case Main, Calculator, Ticket, Movie
 
     var instance: UIStoryboard {
