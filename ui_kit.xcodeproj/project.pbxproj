@@ -32,6 +32,10 @@
 		C535ADBF2B25E0F1005A54CA /* TextFieldDelegateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C535ADBE2B25E0F1005A54CA /* TextFieldDelegateViewController.swift */; };
 		C535ADC12B25E22A005A54CA /* NextScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C535ADC02B25E22A005A54CA /* NextScreenViewController.swift */; };
 		C535ADC32B25E5CE005A54CA /* GeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C535ADC22B25E5CE005A54CA /* GeneralViewController.swift */; };
+		C535ADCB2B2619A0005A54CA /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C535ADC92B2619A0005A54CA /* CoreData.xcdatamodeld */; };
+		C535ADD32B261E0C005A54CA /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C535ADD22B261E0C005A54CA /* CoreDataService.swift */; };
+		C535ADD92B270F86005A54CA /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C535ADD82B270F86005A54CA /* MovieDetailViewController.swift */; };
+		C535ADDB2B271583005A54CA /* FavoriteMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C535ADDA2B271583005A54CA /* FavoriteMovieViewController.swift */; };
 		C59B54042B11E62A00313C93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B54032B11E62A00313C93 /* AppDelegate.swift */; };
 		C59B54062B11E62A00313C93 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B54052B11E62A00313C93 /* SceneDelegate.swift */; };
 		C59B54082B11E62A00313C93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B54072B11E62A00313C93 /* ViewController.swift */; };
@@ -85,6 +89,11 @@
 		C535ADBE2B25E0F1005A54CA /* TextFieldDelegateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDelegateViewController.swift; sourceTree = "<group>"; };
 		C535ADC02B25E22A005A54CA /* NextScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextScreenViewController.swift; sourceTree = "<group>"; };
 		C535ADC22B25E5CE005A54CA /* GeneralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralViewController.swift; sourceTree = "<group>"; };
+		C535ADCA2B2619A0005A54CA /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
+		C535ADCD2B261B75005A54CA /* FavoriteMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMovie.swift; sourceTree = "<group>"; };
+		C535ADD22B261E0C005A54CA /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
+		C535ADD82B270F86005A54CA /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
+		C535ADDA2B271583005A54CA /* FavoriteMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMovieViewController.swift; sourceTree = "<group>"; };
 		C59B54002B11E62A00313C93 /* ui_kit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ui_kit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C59B54032B11E62A00313C93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C59B54052B11E62A00313C93 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -234,6 +243,8 @@
 				C535ADAA2B24BE1A005A54CA /* MovieCustomCell.swift */,
 				C535ADB62B25C236005A54CA /* MovieCollectionViewController.swift */,
 				C535ADB82B25C555005A54CA /* MovieCollectionViewCell.swift */,
+				C535ADD82B270F86005A54CA /* MovieDetailViewController.swift */,
+				C535ADDA2B271583005A54CA /* FavoriteMovieViewController.swift */,
 			);
 			path = viewController;
 			sourceTree = "<group>";
@@ -264,6 +275,24 @@
 			path = viewController;
 			sourceTree = "<group>";
 		};
+		C535ADC82B26196E005A54CA /* coreData */ = {
+			isa = PBXGroup;
+			children = (
+				C535ADCC2B261A52005A54CA /* dataModel */,
+				C535ADC92B2619A0005A54CA /* CoreData.xcdatamodeld */,
+				C535ADD22B261E0C005A54CA /* CoreDataService.swift */,
+			);
+			path = coreData;
+			sourceTree = "<group>";
+		};
+		C535ADCC2B261A52005A54CA /* dataModel */ = {
+			isa = PBXGroup;
+			children = (
+				C535ADCD2B261B75005A54CA /* FavoriteMovie.swift */,
+			);
+			path = dataModel;
+			sourceTree = "<group>";
+		};
 		C59B53F72B11E62A00313C93 = {
 			isa = PBXGroup;
 			children = (
@@ -289,6 +318,7 @@
 			children = (
 				C535AD9E2B201E58005A54CA /* extension */,
 				C535AD302B11F70D005A54CA /* ui */,
+				C535ADC82B26196E005A54CA /* coreData */,
 				C535ADA12B201F2B005A54CA /* data */,
 				C535AD332B182216005A54CA /* calculator */,
 				C535AD262B11F4C9005A54CA /* ticket */,
@@ -466,10 +496,14 @@
 				C535AD2D2B11F6B5005A54CA /* TicketViewController.swift in Sources */,
 				C535AD8E2B1EC284005A54CA /* appStoryBoard.swift in Sources */,
 				C535AD382B182249005A54CA /* CalculatorViewController.swift in Sources */,
+				C535ADD92B270F86005A54CA /* MovieDetailViewController.swift in Sources */,
+				C535ADD32B261E0C005A54CA /* CoreDataService.swift in Sources */,
 				C535AD2F2B11F6E0005A54CA /* LogInViewController.swift in Sources */,
 				C59B54042B11E62A00313C93 /* AppDelegate.swift in Sources */,
 				C535ADB02B24BE70005A54CA /* movieData.swift in Sources */,
 				C535ADB92B25C555005A54CA /* MovieCollectionViewCell.swift in Sources */,
+				C535ADDB2B271583005A54CA /* FavoriteMovieViewController.swift in Sources */,
+				C535ADCB2B2619A0005A54CA /* CoreData.xcdatamodeld in Sources */,
 				C535AD8C2B1EC248005A54CA /* extensionUIVc.swift in Sources */,
 				C535ADBF2B25E0F1005A54CA /* TextFieldDelegateViewController.swift in Sources */,
 				C535AD2B2B11F5E3005A54CA /* SignUpViewController.swift in Sources */,
@@ -850,6 +884,19 @@
 			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		C535ADC92B2619A0005A54CA /* CoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C535ADCA2B2619A0005A54CA /* CoreData.xcdatamodel */,
+			);
+			currentVersion = C535ADCA2B2619A0005A54CA /* CoreData.xcdatamodel */;
+			path = CoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C59B53F82B11E62A00313C93 /* Project object */;
 }

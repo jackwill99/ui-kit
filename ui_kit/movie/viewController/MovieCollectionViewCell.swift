@@ -13,11 +13,6 @@ class MovieCollectionViewCell: UICollectionViewCell {
     @IBOutlet var lblRating: UILabel!
     @IBOutlet var img: UIImageView!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
     public func config(movieTitle: String, movieRuntime: String, movieImage: String) {
         lblTitle.text = movieTitle
         lblRating.text = movieRuntime

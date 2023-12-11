@@ -10,7 +10,7 @@ import UIKit
 
 enum AppStoryboard: String {
     /// NOTE: These must be the same  of your storyboard name
-    case Main, Calculator, Ticket, Movie, TextField
+    case Main, Calculator, Ticket, Movie, TextField, FavoriteMovie
 
     var instance: UIStoryboard {
         return UIStoryboard(name: rawValue, bundle: Bundle.main)

@@ -12,6 +12,8 @@ class MovieCollectionViewController: UIViewController {
 
     var movieList: [Movie]?
 
+    var coreDataService: CoreDataService!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -47,6 +49,17 @@ extension MovieCollectionViewController: UICollectionViewDelegate, UICollectionV
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: getWidth, height: 240)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let movie = movieList?[indexPath.row] {
+            let movieDetailVC = MovieDetailViewController.getController(to: .Movie)
+
+            movieDetailVC.movie = movie
+            movieDetailVC.coreDataService = coreDataService
+
+            present(movieDetailVC, animated: true)
+        }
     }
 
     private func addImgConstraint(_ img: UIImageView) {

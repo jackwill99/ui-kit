@@ -12,6 +12,8 @@ class MovieViewController: UIViewController {
 
     var movieList: [Movie]?
 
+    var coreDataService: CoreDataService!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -42,5 +44,16 @@ extension MovieViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 207
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let movie = movieList?[indexPath.row] {
+            let movieDetailVC = MovieDetailViewController.getController(to: .Movie)
+
+            movieDetailVC.movie = movie
+            movieDetailVC.coreDataService = coreDataService
+
+            present(movieDetailVC, animated: true)
+        }
     }
 }

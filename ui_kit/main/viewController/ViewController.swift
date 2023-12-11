@@ -12,6 +12,8 @@ class ViewController: UIViewController {
 
     var projectList: [Project]?
 
+    let coreDataService = CoreDataService()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -67,9 +69,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             navigationController?.pushViewController(ticketVC, animated: true)
         case 2:
             let movieVC = MovieViewController.getController(to: .Movie)
+            movieVC.coreDataService = coreDataService
             navigationController?.pushViewController(movieVC, animated: true)
         case 3:
             let movieCltVC = MovieCollectionViewController.getController(to: .Movie)
+            movieCltVC.coreDataService = coreDataService
             navigationController?.pushViewController(movieCltVC, animated: true)
         default:
             print("Can't go")
