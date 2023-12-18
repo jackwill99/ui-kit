@@ -17,19 +17,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="007" translatesAutoresizingMaskIntoConstraints="NO" id="TBi-DY-mL3">
-                                <rect key="frame" x="0.0" y="59" width="393" height="250"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="qqm-hU-Npl"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Canopy Park" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNQ-kv-izo">
-                                <rect key="frame" x="39.999999999999993" y="339" width="116.33333333333331" height="24"/>
+                                <rect key="frame" x="39.999999999999993" y="383" width="116.33333333333331" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HW1-JU-iXH">
-                                <rect key="frame" x="40" y="383" width="140" height="20"/>
+                                <rect key="frame" x="40" y="427" width="140" height="20"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="location.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="eyb-SS-s8y">
                                         <rect key="frame" x="0.0" y="0.99999999999999822" width="20" height="18.333333333333336"/>
@@ -48,7 +48,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="l9t-BU-oMP">
-                                <rect key="frame" x="40" y="423" width="313" height="74.666666666666686"/>
+                                <rect key="frame" x="40" y="467" width="313" height="74.666666666666629"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dRl-c2-dhz">
                                         <rect key="frame" x="0.0" y="0.0" width="313" height="20"/>
@@ -79,7 +79,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mon-Thu : 10:00 - 22:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2V9-ue-OSb">
-                                                <rect key="frame" x="30" y="32.333333333333314" width="275" height="14.333333333333336"/>
+                                                <rect key="frame" x="30" y="32.333333333333371" width="275" height="14.333333333333336"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -90,7 +90,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5c-EU-Clb">
-                                <rect key="frame" x="40" y="671" width="313" height="40"/>
+                                <rect key="frame" x="40" y="715" width="313" height="40"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="dPl-9T-rlZ"/>
@@ -104,7 +104,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="viq-MF-Ct8">
-                                <rect key="frame" x="40" y="517.66666666666663" width="313" height="123.33333333333337"/>
+                                <rect key="frame" x="40" y="561.66666666666663" width="313" height="123.33333333333337"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8Id-gs-Wdd">
                                         <rect key="frame" x="0.0" y="0.0" width="313" height="20"/>
@@ -226,7 +226,14 @@
                             <constraint firstItem="h5c-EU-Clb" firstAttribute="leading" secondItem="jZv-hc-AJW" secondAttribute="leading" constant="40" id="vy3-zq-gME"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Ticket" id="2du-fg-CHp"/>
+                    <navigationItem key="navigationItem" title="Ticket" id="2du-fg-CHp">
+                        <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" id="pqx-Yq-glJ">
+                            <connections>
+                                <action selector="back" destination="lq0-t4-Dfp" id="Yhq-LK-ODJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="btnLogin" destination="h5c-EU-Clb" id="mYT-Vg-v6k"/>
                     </connections>
@@ -546,6 +553,7 @@ Rewards points with seamless payment in just a single tap.</string>
     <resources>
         <image name="007" width="1140" height="570"/>
         <image name="calendar" catalog="system" width="128" height="107"/>
+        <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <image name="eye.fill" catalog="system" width="128" height="80"/>
         <image name="holiday" width="512" height="512"/>
         <image name="location.fill" catalog="system" width="128" height="119"/>
@@ -553,19 +561,19 @@ Rewards points with seamless payment in just a single tap.</string>
         <image name="ticket" width="512" height="512"/>
         <image name="wallet" width="512" height="512"/>
         <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

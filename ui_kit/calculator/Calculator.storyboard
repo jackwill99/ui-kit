@@ -11,7 +11,7 @@
         <!--Calculator-->
         <scene sceneID="uQa-Va-fTU">
             <objects>
-                <viewController storyboardIdentifier="CalculatorViewController" id="Zbt-nb-i6b" customClass="CalculatorViewController" customModule="ui_kit_autolayout" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CalculatorViewController" id="Zbt-nb-i6b" customClass="CalculatorViewController" customModule="ui_kit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uDe-nt-mhA">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -332,6 +332,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="NHP-ES-KFi"/>
                     <navigationItem key="navigationItem" title="Calculator" id="H3R-cu-thb"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="lblDisplayValue" destination="Bp6-g1-gGs" id="2bR-aV-j5V"/>
@@ -347,7 +348,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

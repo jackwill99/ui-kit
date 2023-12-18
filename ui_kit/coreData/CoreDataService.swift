@@ -20,13 +20,13 @@ class CoreDataService {
         let container = NSPersistentContainer(name: "CoreData")
 
         // Invoke initialization by calling loadPersistentStores method
-        container.loadPersistentStores(completionHandler: { _, error in
+        container.loadPersistentStores(completionHandler: { [weak self] _, error in
 
             // Check if operation is finished with success.
             if let error = error {
                 fatalError("Unable to load persistent stores: \(error)")
             } else {
-                self.objectContext = container.viewContext
+                self?.objectContext = container.viewContext
             }
         })
     }

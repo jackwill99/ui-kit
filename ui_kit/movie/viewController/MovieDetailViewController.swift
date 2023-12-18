@@ -89,11 +89,26 @@ class MovieDetailViewController: UIViewController {
     }
 
     @IBAction func favoriteEvent(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Take relax with your favorite movie.", message: nil, preferredStyle: .actionSheet)
+
         if isFavorite {
-            unFavorite()
+            alert.addAction(UIAlertAction(title: "Un-Favorite", style: .destructive, handler: { _ in
+                self.unFavorite()
+            }))
         } else {
-            favorite()
+            alert.addAction(UIAlertAction(title: "Favorite", style: .default, handler: { _ in
+                self.favorite()
+            }))
         }
+
+        let cancelBtn = UIAlertAction(title: "Cancel", style: .cancel, handler: { _ in
+        })
+        // Changing the UIAlertAction text color
+//        cancelBtn.setValue(UIColor.red, forKey: "titleTextColor")
+
+        alert.addAction(cancelBtn)
+
+        present(alert, animated: true)
     }
 
     @IBAction func readMal(_ sender: UIButton) {

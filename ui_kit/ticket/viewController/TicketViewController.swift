@@ -29,4 +29,18 @@ class TicketViewController: UIViewController {
 
         present(loginVC, animated: true)
     }
+
+    @IBAction func back() {
+        let alert = UIAlertController(title: "Alert Message", message: "Are you sure to go home?", preferredStyle: .alert)
+
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+            self.navigationController?.popViewController(animated: true)
+        }))
+
+        alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: { _ in
+
+        }))
+
+        present(alert, animated: true)
+    }
 }
