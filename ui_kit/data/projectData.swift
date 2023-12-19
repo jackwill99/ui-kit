@@ -35,5 +35,10 @@ let generalProjectData = [
         "title": "Text Field Delegate",
         "desc": "Learn Observing the NotificationCenter",
         "img": "pj_text_field"
+    ],
+    [
+        "title": "Modal Dialog Sheet",
+        "desc": "Custom View and Custom Modal Dialog",
+        "img": "pj_modal_dialog"
     ]
 ]

@@ -56,7 +56,10 @@ extension GeneralViewController: UITableViewDelegate, UITableViewDataSource {
             let calculatorVC = TextFieldDelegateViewController.getController(to: .TextField)
 
             navigationController?.pushViewController(calculatorVC, animated: true)
+        case 1:
+            let modalDialogVC = ModalDialogSheetViewController.getController(to: .ModalDialogSheet)
 
+            navigationController?.pushViewController(modalDialogVC, animated: true)
         default:
             print("Can't go")
         }

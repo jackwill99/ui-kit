@@ -45,6 +45,12 @@
 		C59B541B2B11E62C00313C93 /* ui_kitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B541A2B11E62C00313C93 /* ui_kitTests.swift */; };
 		C59B54252B11E62C00313C93 /* ui_kitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B54242B11E62C00313C93 /* ui_kitUITests.swift */; };
 		C59B54272B11E62C00313C93 /* ui_kitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B54262B11E62C00313C93 /* ui_kitUITestsLaunchTests.swift */; };
+		C5D6AC802B2FFF280011D397 /* ModalDialogSheet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5D6AC7F2B2FFF280011D397 /* ModalDialogSheet.storyboard */; };
+		C5D6AC832B2FFFBD0011D397 /* ModalDialogSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D6AC822B2FFFBD0011D397 /* ModalDialogSheetViewController.swift */; };
+		C5D6AC872B3016840011D397 /* SnackBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D6AC852B3016840011D397 /* SnackBarView.swift */; };
+		C5D6AC882B3016840011D397 /* SnackBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5D6AC862B3016840011D397 /* SnackBarView.xib */; };
+		C5D6AC902B309E980011D397 /* ModalDialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D6AC8E2B309E980011D397 /* ModalDialogViewController.swift */; };
+		C5D6AC932B309EE10011D397 /* ModalDialog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5D6AC922B309EE10011D397 /* ModalDialog.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +113,12 @@
 		C59B54202B11E62C00313C93 /* ui_kitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ui_kitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C59B54242B11E62C00313C93 /* ui_kitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ui_kitUITests.swift; sourceTree = "<group>"; };
 		C59B54262B11E62C00313C93 /* ui_kitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ui_kitUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C5D6AC7F2B2FFF280011D397 /* ModalDialogSheet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ModalDialogSheet.storyboard; sourceTree = "<group>"; };
+		C5D6AC822B2FFFBD0011D397 /* ModalDialogSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalDialogSheetViewController.swift; sourceTree = "<group>"; };
+		C5D6AC852B3016840011D397 /* SnackBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackBarView.swift; sourceTree = "<group>"; };
+		C5D6AC862B3016840011D397 /* SnackBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SnackBarView.xib; sourceTree = "<group>"; };
+		C5D6AC8E2B309E980011D397 /* ModalDialogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalDialogViewController.swift; sourceTree = "<group>"; };
+		C5D6AC922B309EE10011D397 /* ModalDialog.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ModalDialog.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +189,8 @@
 		C535AD302B11F70D005A54CA /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				C5D6AC8D2B309E770011D397 /* modalDialog */,
+				C5D6AC842B30059F0011D397 /* customView */,
 				C535AD312B11F732005A54CA /* MakeGradientToButton.swift */,
 				C535AD8D2B1EC284005A54CA /* appStoryBoard.swift */,
 			);
@@ -325,6 +339,7 @@
 				C535ADA42B24BD1E005A54CA /* movie */,
 				C535AD242B11F480005A54CA /* main */,
 				C535ADBA2B25E091005A54CA /* textFieldDelegate */,
+				C5D6AC7E2B2FFDC00011D397 /* modalDialogSheet */,
 				C59B54032B11E62A00313C93 /* AppDelegate.swift */,
 				C59B54052B11E62A00313C93 /* SceneDelegate.swift */,
 				C59B540C2B11E62C00313C93 /* Assets.xcassets */,
@@ -349,6 +364,41 @@
 				C59B54262B11E62C00313C93 /* ui_kitUITestsLaunchTests.swift */,
 			);
 			path = ui_kitUITests;
+			sourceTree = "<group>";
+		};
+		C5D6AC7E2B2FFDC00011D397 /* modalDialogSheet */ = {
+			isa = PBXGroup;
+			children = (
+				C5D6AC812B2FFF2F0011D397 /* viewController */,
+				C5D6AC7F2B2FFF280011D397 /* ModalDialogSheet.storyboard */,
+			);
+			path = modalDialogSheet;
+			sourceTree = "<group>";
+		};
+		C5D6AC812B2FFF2F0011D397 /* viewController */ = {
+			isa = PBXGroup;
+			children = (
+				C5D6AC822B2FFFBD0011D397 /* ModalDialogSheetViewController.swift */,
+			);
+			path = viewController;
+			sourceTree = "<group>";
+		};
+		C5D6AC842B30059F0011D397 /* customView */ = {
+			isa = PBXGroup;
+			children = (
+				C5D6AC852B3016840011D397 /* SnackBarView.swift */,
+				C5D6AC862B3016840011D397 /* SnackBarView.xib */,
+			);
+			path = customView;
+			sourceTree = "<group>";
+		};
+		C5D6AC8D2B309E770011D397 /* modalDialog */ = {
+			isa = PBXGroup;
+			children = (
+				C5D6AC8E2B309E980011D397 /* ModalDialogViewController.swift */,
+				C5D6AC922B309EE10011D397 /* ModalDialog.storyboard */,
+			);
+			path = modalDialog;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -461,12 +511,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5D6AC802B2FFF280011D397 /* ModalDialogSheet.storyboard in Resources */,
 				C535AD282B11F4F6005A54CA /* Ticket.storyboard in Resources */,
 				C535ADA72B24BD5A005A54CA /* Movie.storyboard in Resources */,
 				C535ADBD2B25E0BB005A54CA /* TextField.storyboard in Resources */,
 				C535AD362B182238005A54CA /* Calculator.storyboard in Resources */,
 				C59B54102B11E62C00313C93 /* LaunchScreen.storyboard in Resources */,
+				C5D6AC882B3016840011D397 /* SnackBarView.xib in Resources */,
 				C59B540D2B11E62C00313C93 /* Assets.xcassets in Resources */,
+				C5D6AC932B309EE10011D397 /* ModalDialog.storyboard in Resources */,
 				C59B540B2B11E62A00313C93 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -500,6 +553,7 @@
 				C535ADD32B261E0C005A54CA /* CoreDataService.swift in Sources */,
 				C535AD2F2B11F6E0005A54CA /* LogInViewController.swift in Sources */,
 				C59B54042B11E62A00313C93 /* AppDelegate.swift in Sources */,
+				C5D6AC902B309E980011D397 /* ModalDialogViewController.swift in Sources */,
 				C535ADB02B24BE70005A54CA /* movieData.swift in Sources */,
 				C535ADB92B25C555005A54CA /* MovieCollectionViewCell.swift in Sources */,
 				C535ADDB2B271583005A54CA /* FavoriteMovieViewController.swift in Sources */,
@@ -516,6 +570,8 @@
 				C535AD322B11F732005A54CA /* MakeGradientToButton.swift in Sources */,
 				C535AD932B1F11A0005A54CA /* Project.swift in Sources */,
 				C535ADA02B201ECA005A54CA /* codableExt.swift in Sources */,
+				C5D6AC872B3016840011D397 /* SnackBarView.swift in Sources */,
+				C5D6AC832B2FFFBD0011D397 /* ModalDialogSheetViewController.swift in Sources */,
 				C535ADAE2B24BE53005A54CA /* Movie.swift in Sources */,
 				C535ADC12B25E22A005A54CA /* NextScreenViewController.swift in Sources */,
 				C535ADC32B25E5CE005A54CA /* GeneralViewController.swift in Sources */,
